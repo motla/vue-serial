@@ -3,7 +3,7 @@
 ## Features
 ### :rocket: [See live demo](https://motla.github.io/vue-serial/)
 - Easy-to-use event-based API
-- States and configuration variables are Vue.js reactive
+- States, signals and configuration variables are Vue.js reactive
 - Can poll CTS, DCD, DSR, and RI signals
 - Serial configuration is stored in the browser localStorage
 
@@ -56,8 +56,7 @@ serial.flowControl = "none";
 
 // Function to ask the user to select which serial device to connect
 async function user_connect () {
-  // try { // in your application, encapsulate in a try/catch to manage errors
-  if(serial.isOpen) await serial.close();
+  if(serial.isOpen) await serial.close(); // in your application, encapsulate in a try/catch to manage errors
   else {
     await serial.connect(); // can be `serial.connect([{ usbVendorId:1027 }])` to select only FTDI devices for example
     if(serial.isOpen) {
@@ -65,17 +64,14 @@ async function user_connect () {
       // await serial.write(...); // to send bytes to device automatically after connection
     }
   }
-  // } catch (e) { }
 }
 
 // Function to send the value contained in the input
 async function user_send () {
   const input_elt = input.value; // refers to <input ref="input">
   const value = input_elt.value;
-  // try {  // in your application, encapsulate in a try/catch to manage errors
-  await serial.write(value);
+  await serial.write(value); // in your application, encapsulate in a try/catch to manage errors
   console.log("bytes sent:", value);
-  // } catch (e) { }
 }
 
 // This will watch for incoming data
