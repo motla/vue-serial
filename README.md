@@ -149,7 +149,7 @@ watch(() => serial.clearToSend, (value) => { console.log("CTS signal:", value); 
 
 </details>
 
-## API
+## Docs
 [:book: Read the API](./api/default.md)
 
 ## Project development
