@@ -23,7 +23,7 @@ npm install vue-serial
 
 ###### :speech_balloon: If you prefer static files, import assets from the `dist` folder.
 
-## Example
+## Examples
 ###### MyComponent.vue (using Composition API)
 ```Vue
 <template>
