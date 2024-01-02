@@ -1,0 +1,65 @@
+{
+  "name": "vue-serial",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-serial.js",
+  "module": "./dist/vue-serial.umd.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-serial.js",
+      "require": "./dist/vue-serial.umd.cjs"
+    }
+  },
+  "version": "1.0.0",
+  "description": "Web Serial for Vue.js",
+  "author": {
+    "name": "Romain Lamothe",
+    "url": "http://www.motla.fr/"
+  },
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "webserial",
+    "web",
+    "serial",
+    "rs-232",
+    "uart",
+    "usart",
+    "usb",
+    "ftdi"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motla/vue-serial.git"
+  },
+  "bugs": {
+    "url": "https://github.com/motla/vue-serial/issues"
+  },
+  "homepage": "https://github.com/motla/vue-serial",
+  "scripts": {
+    "dev": "vite",
+    "build:demo": "vite build",
+    "build:lib": "vite build --mode library",
+    "typedoc": "typedoc"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/w3c-web-serial": "^1.0.6",
+    "@vitejs/plugin-basic-ssl": "^1.0.2",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "@vue/tsconfig": "^0.5.1",
+    "monaco-editor": "^0.44.0",
+    "typedoc": "^0.25.6",
+    "typedoc-github-wiki-theme": "^1.1.0",
+    "typedoc-plugin-markdown": "^3.17.1",
+    "typescript": "^5.3.3",
+    "vite": "^4.4.11",
+    "vue": "^3.3.4",
+    "xterm": "^5.3.0",
+    "xterm-addon-fit": "^0.8.0",
+    "xterm-addon-web-links": "^0.9.0"
+  }
+}
