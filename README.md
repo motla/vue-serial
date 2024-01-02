@@ -38,8 +38,7 @@ npm install vue-serial
 </template>
 
 <script setup>
-// In this example we use the Vue3 "Composition API"
-// but it works with the "Option API" as well.
+// In this example we use the Vue3 "Composition API" but it works with the "Option API" as well.
 import { ref, watch } from 'vue'
 import VueSerial from 'vue-serial'
 
