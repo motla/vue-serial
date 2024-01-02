@@ -57,7 +57,7 @@ serial.flowControl = "none";
 async function user_connect () {
   if(serial.isOpen) await serial.close(); // in your application, encapsulate in a try/catch to manage errors
   else {
-    await serial.connect(); // can be `serial.connect([{ usbVendorId:1027 }])` to select only FTDI devices for example
+    await serial.connect(); // can be `serial.connect([{ usbVendorId:1027 }])` to select only FTDI devices
     if(serial.isOpen) {
       serial.startSignalsPolling(); // (optional) to listen for CTS, DCD, DSR, and RI signal events
       // await serial.write(...); // to send bytes to device automatically after connection
@@ -123,7 +123,7 @@ watch(() => serial.clearToSend, (value) => { console.log("CTS signal:", value); 
       async user_connect () { // Function to ask the user to select which serial device to connect
         if(this.serial.isOpen) await this.serial.close(); // in your application, encapsulate in a try/catch to manage errors
         else {
-          await this.serial.connect(); // can be `serial.connect([{ usbVendorId:1027 }])` to select only FTDI devices for example
+          await this.serial.connect(); // can be `serial.connect([{ usbVendorId:1027 }])` to select only FTDI devices
           if(this.serial.isOpen) {
             this.serial.startSignalsPolling(); // (optional) to listen for CTS, DCD, DSR, and RI signal events
             // await serial.write(...); // to send bytes to device automatically after connection
