@@ -76,7 +76,7 @@ async function user_send () {
 // This will watch for incoming data
 serial.addEventListener("read", ({ value }) => { console.log("bytes read:", value); });
 
-// This will watch for CTS input signals change (startSignalsPolling must be called after the connect function)
+// This will watch for CTS input signal changes (startSignalsPolling must have been called)
 watch(() => serial.clearToSend, (value) => { console.log("CTS signal:", value); });
 
 </script>
@@ -138,6 +138,7 @@ watch(() => serial.clearToSend, (value) => { console.log("CTS signal:", value); 
       }
     },
     watch: {
+      // This will watch for CTS input signal changes (startSignalsPolling must have been called)
       "serial.clearToSend": (value) => { console.log("CTS signal:", value); }
     }
   }).mount('#app');
