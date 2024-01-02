@@ -82,7 +82,7 @@ watch(() => serial.clearToSend, (value) => { console.log("CTS signal:", value); 
 </script>
 ```
 <details>
-<summary><small>same example using static files loaded with a CDN (using Options API)</small></summary>
+<summary><small>same example using static files loaded with a CDN (using <strong>Options API</strong>)</small></summary>
 
 ```HTML
 <html>
@@ -121,8 +121,7 @@ watch(() => serial.clearToSend, (value) => { console.log("CTS signal:", value); 
     },
     methods: {
       async user_connect () { // Function to ask the user to select which serial device to connect
-        // try { // in your application, encapsulate in a try/catch to manage errors
-        if(this.serial.isOpen) await this.serial.close();
+        if(this.serial.isOpen) await this.serial.close(); // in your application, encapsulate in a try/catch to manage errors
         else {
           await this.serial.connect(); // can be `serial.connect([{ usbVendorId:1027 }])` to select only FTDI devices for example
           if(this.serial.isOpen) {
@@ -130,15 +129,12 @@ watch(() => serial.clearToSend, (value) => { console.log("CTS signal:", value); 
             // await serial.write(...); // to send bytes to device automatically after connection
           }
         }
-        // } catch (e) { }
       },
       async user_send () { // Function to send the value contained in the input
         const input_elt = input.value; // refers to <input ref="input">
         const value = input_elt.value;
-        // try {  // in your application, encapsulate in a try/catch to manage errors
-        await this.serial.write(value);
+        await this.serial.write(value); // in your application, encapsulate in a try/catch to manage errors
         console.log("bytes sent:", value);
-        // } catch (e) { }
       }
     },
     watch: {
