@@ -105,7 +105,7 @@ watch(() => serial.clearToSend, (value) => { console.log("CTS signal:", value); 
   const app = Vue.createApp({
     data () {
       return {
-        serial: new VueSerial();
+        serial: new VueSerial()
       }
     },
     mounted () {
