@@ -13,7 +13,7 @@
       "types": "./dist/vue-serial.d.ts"
     }
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Web Serial for Vue.js",
   "author": {
     "name": "Romain Lamothe",
