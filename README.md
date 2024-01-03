@@ -131,7 +131,7 @@ watch(() => serial.clearToSend, (value) => { console.log("CTS signal:", value); 
         }
       },
       async user_send () { // Function to send the value contained in the input
-        const input_elt = input.value; // refers to <input ref="input">
+        const input_elt = this.$refs.input; // refers to <input ref="input">
         const value = input_elt.value;
         await this.serial.write(value); // in your application, encapsulate in a try/catch to manage errors
         console.log("bytes sent:", value);
