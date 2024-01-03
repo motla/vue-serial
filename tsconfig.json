@@ -3,7 +3,12 @@
   "files": ["src/vue-serial.ts"],
   "include": ["node_modules/@types/**/*.d.ts"],
   "compilerOptions": {
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "strict": true,
+    "declaration": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
   },
   "typedocOptions": {
     "entryPoints": ["src/vue-serial.ts"],

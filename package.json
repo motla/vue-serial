@@ -1,15 +1,16 @@
 {
   "name": "vue-serial",
-  "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/vue-serial.js",
-  "module": "./dist/vue-serial.umd.cjs",
+  "main": "./dist/vue-serial.mjs",
+  "module": "./dist/vue-serial.umd.js",
+  "typings": "./dist/vue-serial.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/vue-serial.js",
-      "require": "./dist/vue-serial.umd.cjs"
+      "import": "./dist/vue-serial.mjs",
+      "require": "./dist/vue-serial.umd.js",
+      "types": "./dist/vue-serial.d.ts"
     }
   },
   "version": "1.0.0",
@@ -42,7 +43,7 @@
   "scripts": {
     "dev": "vite",
     "build:demo": "vite build",
-    "build:lib": "vite build --mode library",
+    "build:lib": "vite build --mode library && tsc -b",
     "typedoc": "typedoc"
   },
   "devDependencies": {
