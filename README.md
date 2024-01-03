@@ -88,7 +88,7 @@ watch(() => serial.clearToSend, (value) => { console.log("CTS signal:", value); 
 <html>
 <head>
   <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue-serial/dist/vue-serial.umd.cjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-serial/dist/vue-serial.umd.js"></script>
 </head>
 <body>
   <div id="app">
