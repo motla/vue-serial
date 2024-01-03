@@ -413,3 +413,4 @@ T(x, "read");
 export {
   x as default
 };
+//# sourceMappingURL=vue-serial.mjs.map

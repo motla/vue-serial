@@ -22,6 +22,7 @@ export default defineConfig(({ mode }) => {
   if(mode == "library") {
     config.build = {
       outDir: "dist",
+      sourcemap: true,
       lib: {
         entry: "./src/vue-serial.ts",
         name: "VueSerial",
