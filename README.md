@@ -153,7 +153,7 @@ watch(() => serial.clearToSend, (value) => { console.log("CTS signal:", value); 
 [:book: Read the API](./api/default.md)
 
 ## Project development
-- `npm run dev` compiles and hot-reloads demo for development
+- `npm run dev` compiles, serves and hot-reloads demo for development
 - `npm run build:demo` compiles and minifies demo
 - `npm run build:lib` compiles and minifies library
 - `npm run typedoc` compiles API documentation
